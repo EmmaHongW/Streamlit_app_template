@@ -46,60 +46,60 @@ st.subheader("Here is the output of your expected results")
 
 # You can define the model prediction you trained here if needed
 if st.button("Predict"):
-    print('Bingo!')
+    st.write("The prediction result is: Bingo!")
 else:
     pass
-'''
-@st.experimental_memo
-def modelpredict(feature_1, feature_2, feature_3, feature_4, feature_5, feature_6, feature_7):
-    dict_features = {'A': [feature_1], 
-    'B': [feature_2],
-    'C': [feature_7],
-    'D': [feature_6],
-    'E': [feature_3],
-    'F': [feature_4],
-    'G': [feature_5]}
+
+# @st.experimental_memo
+# def modelpredict(feature_1, feature_2, feature_3, feature_4, feature_5, feature_6, feature_7):
+#     dict_features = {'A': [feature_1], 
+#     'B': [feature_2],
+#     'C': [feature_7],
+#     'D': [feature_6],
+#     'E': [feature_3],
+#     'F': [feature_4],
+#     'G': [feature_5]}
 
     
-    X_test = pd.DataFrame(dict_features)
+#     X_test = pd.DataFrame(dict_features)
     
-    # Scale our training data to the [min, max] range
-    X_test_scaled = scaler.transform(X_test)
+#     # Scale our training data to the [min, max] range
+#     X_test_scaled = scaler.transform(X_test)
 
-    # Make the prediction
-    prediction = model.predict(X_test_scaled)
-    return prediction
+#     # Make the prediction
+#     prediction = model.predict(X_test_scaled)
+#     return prediction
 
-if st.button("Predict"):
-    # Predict the result with the model
-    modelpredict.clear()
-    prediction = modelpredict(feature_1, feature_2, feature_3, feature_4, feature_5, feature_6, feature_7)
+# if st.button("Predict"):
+#     # Predict the result with the model
+#     modelpredict.clear()
+#     prediction = modelpredict(feature_1, feature_2, feature_3, feature_4, feature_5, feature_6, feature_7)
 
-    # Output the prediction result
-    st.write("The prediction result is: ")
-    st.markdown(
-    f"""
-    <div 
-        style="
-            background-color: #f9f9f9; 
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 10px;
-        "
-    >
-        {prediction[0]}
-    </div>
-    """,
-    unsafe_allow_html=True
-    )
+#     # Output the prediction result
+#     st.write("The prediction result is: ")
+#     st.markdown(
+#     f"""
+#     <div 
+#         style="
+#             background-color: #f9f9f9; 
+#             border: 1px solid #ddd;
+#             border-radius: 5px;
+#             padding: 10px;
+#         "
+#     >
+#         {prediction[0]}
+#     </div>
+#     """,
+#     unsafe_allow_html=True
+#     )
 
-    # Plot the trend of median house price per m2 in the past 90 days
-    # Disable the warning
-    st.set_option('deprecation.showPyplotGlobalUse', False)
-    traindir = "path/csvs"
+#     # Plot the trend of median house price per m2 in the past 90 days
+#     # Disable the warning
+#     st.set_option('deprecation.showPyplotGlobalUse', False)
+#     traindir = "path/csvs"
 
-    # get the list of all CSV files in the directory
-    csv_files = [f for f in os.listdir(traindir) if f.endswith('.csv')]
+#     # get the list of all CSV files in the directory
+#     csv_files = [f for f in os.listdir(traindir) if f.endswith('.csv')]
 
-    # You can define a new function here to plot the result
-'''
+#     # You can define a new function here to plot the result
+
