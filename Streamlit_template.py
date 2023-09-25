@@ -45,7 +45,11 @@ feature_7 = col7.number_input('Parameter 7', value=1, min_value=0, step=1, help=
 st.subheader("Here is the output of your expected results")
 
 # You can define the model prediction you trained here if needed
-
+if st.button("Predict"):
+    print('Bingo!')
+else:
+    pass
+'''
 @st.experimental_memo
 def modelpredict(feature_1, feature_2, feature_3, feature_4, feature_5, feature_6, feature_7):
     dict_features = {'A': [feature_1], 
@@ -98,3 +102,4 @@ if st.button("Predict"):
     csv_files = [f for f in os.listdir(traindir) if f.endswith('.csv')]
 
     # You can define a new function here to plot the result
+'''
